@@ -44,7 +44,8 @@ pdis_server_port=9080
 pdis_server_ajp_port=9009
 pdis_embedded_db_port=9092" > $TMP_DOWNLOAD_FOLDER/option
 #./pentaho.bin --optionfile $TMP_DOWNLOAD_FOLDER/option
-./pentaho.bin --optionfile $TMP_DOWNLOAD_FOLDER/option | tail -f /tmp/bitrock_installer.log > &1
+./pentaho.bin --optionfile $TMP_DOWNLOAD_FOLDER/option 
+cat /tmp/bitrock_installer.log
 
 cd /opt/Pentaho
 sudo chown $USER -R /opt/Pentaho
